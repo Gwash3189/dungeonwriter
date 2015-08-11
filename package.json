@@ -4,16 +4,25 @@
   "description": "store your dnd adventure notes ",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.13.3",
+    "bookshelf": "^0.8.1",
     "express": "^4.13.3",
+    "knex": "^0.8.6",
+    "pg": "^4.4.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "showdown": "^1.2.2"
   },
   "devDependencies": {
-    "babel": "^5.8.21"
+    "babel": "^5.8.21",
+    "nodemon": "^1.4.0",
+    "parallelshell": "^2.0.0"
   },
   "scripts": {
-    "build": "babel src/server/index.js -o dist/server/index.js && babel src/frontend/index.js -o dist/frontend/index.js"
+    "build": "babel src/server/index.js -o dist/server/index.js && babel src/frontend/index.js -o dist/frontend/index.js",
+    "watch:server": "babel src/server/**/*.js -w -o dist/server/index.js",
+    "watch:frontend": "babel src/frontend/**/*.js -w -o dist/frontend/index.js",
+    "dev": "parallelshell \"npm run watch:server\" \"npm run watch:frontend\" \"nodemon ./dist/server/index.js\" "
   },
   "repository": {
     "type": "git",
