@@ -1,0 +1,36 @@
+{
+  "name": "dungeonwriter",
+  "version": "1.0.0",
+  "description": "store your dnd adventure notes ",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "showdown": "^1.2.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21"
+  },
+  "scripts": {
+    "build": "babel src/server/index.js -o dist/server/index.js && babel src/frontend/index.js -o dist/frontend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gwash3189/dungeonwriter.git"
+  },
+  "keywords": [
+    "dungeon",
+    "writer",
+    "dungeonwriter",
+    "dungeons",
+    "and",
+    "dragons"
+  ],
+  "author": "Adam Beck <beck.web.adam@gmail.c.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gwash3189/dungeonwriter/issues"
+  },
+  "homepage": "https://github.com/Gwash3189/dungeonwriter"
+}
